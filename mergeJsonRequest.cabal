@@ -1,0 +1,48 @@
+name:                mergeJsonRequest
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/Lupino/mergeJsonRequest#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Li Meng Jun
+maintainer:          lmjubuntu@gmail.com
+copyright:           MIT
+category:            value
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     GraphQL
+  build-depends:       base >= 4.7 && < 5
+                     , yuntan-common
+                     , text
+                     , graphql
+                     , wreq
+                     , http-client
+                     , bytestring
+                     , lens
+                     , case-insensitive
+                     , aeson
+  default-language:    Haskell2010
+
+executable mergeJsonRequest
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  ghc-options:         -threaded -rtsopts -with-rtsopts=-N
+  build-depends:       base
+                     , mergeJsonRequest
+                     , text
+                     , graphql
+                     , aeson
+                     , bytestring
+                     , MissingH
+                     , http-client
+                     , http-client-tls
+  default-language:    Haskell2010
+
+source-repository head
+  type:     git
+  location: https://github.com/Lupino/mergeJsonRequest
