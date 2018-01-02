@@ -17,7 +17,9 @@ library
   hs-source-dirs:      src
   exposed-modules:     GraphQL
   build-depends:       base >= 4.7 && < 5
-                     , yuntan-common
+                     , yuntan-common-graphql
+                     , yuntan-common-wreq
+                     , yuntan-common-result
                      , text
                      , graphql
                      , wreq
